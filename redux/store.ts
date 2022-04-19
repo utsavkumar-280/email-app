@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./slice/user.slice";
+import allEmailReducer from "./slice/allEmail.slice";
 export const store = configureStore({
-    reducer: {
-        user: userReducer,
-    },
+	reducer: {
+		allEmail: allEmailReducer,
+	},
 });
 
 export type RootState = ReturnType<typeof store.getState>;
