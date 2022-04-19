@@ -1,0 +1,59 @@
+.mainContainer {
+	width: 100%;
+	height: 85px;
+	display: flex;
+	align-items: center;
+}
+
+.mainContent {
+	margin-top: 1.5rem;
+	width: 100%;
+	display: flex;
+}
+.navText {
+	margin: 0 1.25rem 0 0;
+	font-size: 1.15rem;
+	color: #000000;
+	font-weight: 500;
+}
+.navLink {
+	border: none;
+	font-size: 1.125rem;
+	margin: 0 0.25rem;
+	padding: 0.125rem 1rem;
+	border-radius: 9999px;
+	background-color: var(--bgColor);
+	transition: all ease-in-out 0.25s;
+}
+
+.navLink a {
+	color: #000000;
+	font-weight: 500;
+	transition: all ease-in-out 0.25s;
+}
+
+.activeNavLink {
+	border: none;
+	font-size: 1.125rem;
+	margin: 0 0.25rem;
+	padding: 0.125rem 1rem;
+	border-radius: 9999px;
+	background-color: var(--filterBgColor);
+}
+
+.activeNavLink a {
+	color: var(--textColor);
+	font-weight: 500;
+}
+
+.navLink:hover {
+	background-color: var(--filterBgColor);
+	cursor: pointer;
+	transition: all ease-in-out 0.25s;
+}
+
+.navLink:hover a {
+	color: var(--textColor);
+	font-weight: 500;
+	transition: all ease-in-out 0.25s;
+}
