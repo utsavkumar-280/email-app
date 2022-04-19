@@ -1,12 +1,12 @@
 import Layout from "@/component/Layout";
 import styles from "../styles/home.module.css";
 
-const Home = () => {
+const Favorites = () => {
 	return (
 		<Layout>
-			<div className={styles.mainContainer}>All emails</div>
+			<div className={styles.mainContainer}>Favorite emails</div>
 		</Layout>
 	);
 };
 
-export default Home;
+export default Favorites;
