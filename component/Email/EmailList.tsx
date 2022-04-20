@@ -3,21 +3,25 @@ import React from "react";
 import EmailCard from "./EmailCard";
 import styles from "./email.module.css";
 import { dummyData } from "../../utils/data";
-import { useAllEmail } from "redux/slice/allEmail.slice";
+
 import { Status } from "redux/constant";
 
-const EmailList = ({ isOpen, setIsOpen }) => {
-	const { allEmailsList, status } = useAllEmail();
+const EmailList = ({ isOpen, setIsOpen, emailList, status }) => {
+	console.log({ emailList, status });
 	return status === Status.fulfilled ? (
 		<div className={styles.emailListContainer}>
-			{allEmailsList?.map((data) => (
-				<EmailCard
-					data={data}
-					isOpen={isOpen}
-					setIsOpen={setIsOpen}
-					key={data.id}
-				/>
-			))}
+			{emailList?.length !== 0 ? (
+				emailList?.map((data) => (
+					<EmailCard
+						data={data}
+						isOpen={isOpen}
+						setIsOpen={setIsOpen}
+						key={data.id}
+					/>
+				))
+			) : (
+				<div>Empty</div>
+			)}
 		</div>
 	) : (
 		<div className={styles.emailListLoading}>Loading...</div>

@@ -40,3 +40,8 @@ export type readInitialState = {
 	readEmailsList: emailCardType[] | [];
 	status: string;
 };
+
+export type unreadInitialState = {
+	unreadEmailsList: emailCardType[] | [];
+	status: string;
+};
