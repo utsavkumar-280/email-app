@@ -3,6 +3,9 @@
 	height: 85px;
 	display: flex;
 	align-items: center;
+	position: sticky;
+	top: 0;
+	background-color: var(--bgColor);
 }
 
 .mainContent {

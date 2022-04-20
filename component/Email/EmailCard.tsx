@@ -12,10 +12,7 @@ const EmailCard = ({ data, isOpen, setIsOpen }) => {
 
 	console.log({ emailDescription, formattedDate });
 	return (
-		<section
-			className={styles.cardContainer}
-			onClick={() => setIsOpen((prev) => !prev)}
-		>
+		<section className={styles.cardContainer} onClick={() => setIsOpen(true)}>
 			<section className={styles.cardImgContainer}>
 				<div>{pfp}</div>
 			</section>

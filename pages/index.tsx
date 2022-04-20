@@ -11,7 +11,7 @@ const Home = () => {
 		<Layout>
 			<div className={isOpen ? styles.mainContainer : styles.mainContainerAlt}>
 				<EmailList isOpen={isOpen} setIsOpen={setIsOpen} />
-				{isOpen && <EmailBody />}
+				{isOpen && <EmailBody setIsOpen={setIsOpen} />}
 			</div>
 		</Layout>
 	);
