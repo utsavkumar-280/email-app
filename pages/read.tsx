@@ -4,7 +4,7 @@ import styles from "../styles/home.module.css";
 import EmailBody from "@/component/Email/EmailBody";
 import EmailList from "@/component/Email/EmailList";
 
-const Favorites = () => {
+const Read = () => {
 	const [isOpen, setIsOpen] = useState(true);
 	return (
 		<Layout>
@@ -16,4 +16,4 @@ const Favorites = () => {
 	);
 };
 
-export default Favorites;
+export default Read;

@@ -17,12 +17,12 @@ const Header = () => {
 				<p className={styles.navText}>Filter By:</p>
 				<Link href="/" passHref>
 					<button className={isHome ? styles.activeNavLink : styles.navLink}>
-						<a>All</a>
+						<a>Unread</a>
 					</button>
 				</Link>
-				<Link href="/unread" passHref>
+				<Link href="/read" passHref>
 					<button className={isUnread ? styles.activeNavLink : styles.navLink}>
-						<a>Unread</a>
+						<a>Read</a>
 					</button>
 				</Link>
 

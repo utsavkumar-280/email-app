@@ -1,4 +1,11 @@
 .mainContainer {
 	min-height: calc(100vh - 85px);
-	background-color: red;
+	display: grid;
+	grid-template-columns: 2.5fr 5fr;
+	transition: all ease-in-out 0.25s;
+}
+
+.mainContainerAlt {
+	min-height: calc(100vh - 85px);
+	transition: all ease-in-out 0.25s;
 }

@@ -14,7 +14,7 @@
 	margin: 0 1.25rem 0 0;
 	font-size: 1.15rem;
 	color: #000000;
-	font-weight: 500;
+	font-weight: 600;
 }
 .navLink {
 	border: none;
@@ -28,7 +28,7 @@
 
 .navLink a {
 	color: #000000;
-	font-weight: 500;
+	font-weight: 700;
 	transition: all ease-in-out 0.25s;
 }
 
@@ -43,7 +43,7 @@
 
 .activeNavLink a {
 	color: var(--textColor);
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .navLink:hover {
@@ -54,6 +54,5 @@
 
 .navLink:hover a {
 	color: var(--textColor);
-	font-weight: 500;
 	transition: all ease-in-out 0.25s;
 }

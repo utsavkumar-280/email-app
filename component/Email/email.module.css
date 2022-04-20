@@ -1,0 +1,61 @@
+.emailBodyContainer {
+	transition: all ease-in-out 0.25s;
+	background-color: aqua;
+}
+
+.emailListContainer {
+	transition: all ease-in-out 0.25s;
+	margin: 0 1.75rem 0 0;
+}
+
+.cardContainer {
+	display: flex;
+	border: 0.175rem solid var(--borderColor);
+	padding: 0.65rem 1rem;
+	margin-bottom: 1.75rem;
+	border-radius: 0.65rem;
+	background-color: white;
+	transition: all ease-in-out 0.25s;
+}
+
+.cardContainer:hover {
+	cursor: pointer;
+	border: 0.175rem solid var(--accentColor);
+	transition: all ease-in-out 0.25s;
+}
+
+.cardImgContainer {
+	margin: 0 1rem 0 0;
+}
+
+.cardImgContainer div {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: var(--accentColor);
+	color: white;
+	font-size: 1.325rem;
+	font-weight: 600;
+}
+
+.cardInfo {
+	flex-grow: 1;
+	font-size: 1rem;
+}
+
+.cardInfo p {
+	color: var(--textColor);
+	font-weight: 500;
+	margin-bottom: 0.25rem;
+}
+
+.infoContent {
+	font-weight: 700;
+}
+
+.infoDescription {
+	margin: 0.65rem 0 !important;
+}
