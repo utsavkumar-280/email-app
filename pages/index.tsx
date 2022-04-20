@@ -1,11 +1,12 @@
 import { useState } from "react";
+
 import Layout from "@/component/Layout";
 import styles from "../styles/home.module.css";
 import EmailBody from "@/component/Email/EmailBody";
 import EmailList from "@/component/Email/EmailList";
 
 const Home = () => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<Layout>
