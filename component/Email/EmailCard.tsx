@@ -10,7 +10,7 @@ const EmailCard = ({ data, isOpen, setIsOpen }) => {
 
 	const emailDescription = textFormatter(data.short_description);
 
-	console.log({ emailDescription, formattedDate });
+	// console.log({ emailDescription, formattedDate });
 	return (
 		<section className={styles.cardContainer} onClick={() => setIsOpen(true)}>
 			<section className={styles.cardImgContainer}>

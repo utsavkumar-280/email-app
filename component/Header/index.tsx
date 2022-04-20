@@ -17,7 +17,7 @@ const Header = () => {
 			<nav className={styles.mainContent}>
 				<p className={styles.navText}>Filter By:</p>
 				{pages.map((page) => (
-					<Link href={page.route} passHref>
+					<Link href={page.route} passHref key={page.name}>
 						<button
 							className={
 								asPath === page.route ? styles.activeNavLink : styles.navLink

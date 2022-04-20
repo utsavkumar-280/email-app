@@ -5,7 +5,7 @@ import EmailBody from "@/component/Email/EmailBody";
 import EmailList from "@/component/Email/EmailList";
 
 const Read = () => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<Layout>
 			<div className={isOpen ? styles.mainContainer : styles.mainContainerAlt}>
