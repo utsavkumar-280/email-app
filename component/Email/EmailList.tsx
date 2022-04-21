@@ -20,7 +20,7 @@ const EmailList = ({ isOpen, setIsOpen, emailList, status }) => {
 					/>
 				))
 			) : (
-				<div>Empty</div>
+				<div className={styles.emailListLoading}>No emails</div>
 			)}
 		</div>
 	) : (

@@ -3,6 +3,7 @@ import allEmailReducer from "./slice/allEmail.slice";
 import favoritesReducer from "./slice/favorites.slice";
 import readReducer from "./slice/read.slice";
 import unreadReducer from "./slice/unread.slice";
+import emailBodyReducer from "./slice/emailBody.slice";
 
 export const store = configureStore({
 	reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
 		favorites: favoritesReducer,
 		read: readReducer,
 		unread: unreadReducer,
+		emailBody: emailBodyReducer,
 	},
 });
 

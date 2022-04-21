@@ -78,6 +78,16 @@
 	padding: 2rem 3rem 0 3rem;
 	height: calc(100vh - 81px - 2rem);
 }
+.emailBodyLoading {
+	display: flex;
+	justify-content: center;
+	border: 0.175rem solid var(--borderColor);
+	border-radius: 0.65rem;
+	background-color: white;
+	padding: 2rem 3rem 0 3rem;
+	height: calc(100vh - 81px - 2rem);
+	color: var(--accentColor);
+}
 
 .emailImgContainer {
 	margin: 0 2rem 0 0;
@@ -115,6 +125,21 @@
 	color: var(--textColor);
 	background-color: var(--filterBgColor);
 	border-radius: 9999px;
+	transition: all ease-in-out 0.25s;
+}
+.emailCtaActive {
+	border: none;
+	padding: 0.325rem 1rem;
+	margin: 0 0.5rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: white;
+	background-color: var(--accentColor);
+	border-radius: 9999px;
+	transition: all ease-in-out 0.25s;
+}
+.emailCtaActive:hover {
+	cursor: pointer;
 	transition: all ease-in-out 0.25s;
 }
 

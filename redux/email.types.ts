@@ -45,3 +45,8 @@ export type unreadInitialState = {
 	unreadEmailsList: emailCardType[] | [];
 	status: string;
 };
+
+export type emailBodyInitialState = {
+	currentEmailBody: fullEmailType | {};
+	status: string;
+};
