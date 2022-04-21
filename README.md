@@ -17,3 +17,5 @@ A simple email client app.
 - Next.js
 - Redux
 - TypeScript
+
+  **Live Demo**: https://email-app-demo.vercel.app/
