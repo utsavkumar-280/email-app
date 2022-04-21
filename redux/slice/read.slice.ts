@@ -3,8 +3,11 @@ import { createSlice, createAction } from "@reduxjs/toolkit";
 import { readInitialState } from "redux/email.types";
 import { Status } from "redux/constant";
 import { useAppSelector } from "redux/hooks";
+import { emailCardType } from "../email.types";
+import { removeUnreadEmail } from "./unread.slice";
 
 export const loadReadEmails = createAction("read/loadUnreadEmails");
+export const addReadEmail = createAction<emailCardType>("read/addReadEmail");
 
 const initialState: readInitialState = {
 	readEmailsList: [],
@@ -29,6 +32,23 @@ export const readSlice = createSlice({
 				state.readEmailsList = [];
 				state.status = Status.fulfilled;
 			}
+		});
+		builder.addCase(removeUnreadEmail, (state, action) => {
+			const dummyState = [...state.readEmailsList, action.payload];
+
+			const cleanState = [
+				...new Set(dummyState.map((a) => JSON.stringify(a))),
+			].map((a) => JSON.parse(a));
+
+			console.log({ dummyState, cleanState });
+
+			state.readEmailsList = [...cleanState];
+			state.status = Status.fulfilled;
+
+			localStorage?.setItem(
+				"session_read_emails",
+				JSON.stringify({ readEmailsList: state.readEmailsList })
+			);
 		});
 	},
 });

@@ -45,7 +45,6 @@ const EmailBody = ({ setIsOpen }) => {
 	const isAlreadyFavorite = favoriteEmailsList.find(
 		(email: emailCardType) => email?.id === emailCard.id
 	);
-	console.log({ isAlreadyFavorite });
 
 	const favoriteHandler = function () {
 		if (isAlreadyFavorite) {

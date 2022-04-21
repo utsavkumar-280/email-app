@@ -38,7 +38,6 @@ export const favoritesSlice = createSlice({
 			}
 		});
 		builder.addCase(addFavoriteEmail, (state, action) => {
-			console.log("added favorite");
 			const dummyState = [...state.favoriteEmailsList, action.payload];
 
 			const cleanState = [
@@ -56,7 +55,6 @@ export const favoritesSlice = createSlice({
 			);
 		});
 		builder.addCase(removeFavoriteEmail, (state, action) => {
-			console.log("removed favorite");
 			const mainEmail = action?.payload;
 
 			let dummyState = [

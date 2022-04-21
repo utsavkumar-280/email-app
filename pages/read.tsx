@@ -17,6 +17,7 @@ const Read = () => {
 					setIsOpen={setIsOpen}
 					emailList={readEmailsList}
 					status={status}
+					type="read"
 				/>
 				{isOpen && <EmailBody setIsOpen={setIsOpen} />}
 			</div>

@@ -2,11 +2,9 @@ import React from "react";
 
 import EmailCard from "./EmailCard";
 import styles from "./email.module.css";
-import { dummyData } from "../../utils/data";
-
 import { Status } from "redux/constant";
 
-const EmailList = ({ isOpen, setIsOpen, emailList, status }) => {
+const EmailList = ({ isOpen, setIsOpen, emailList, status, type }) => {
 	console.log({ emailList, status });
 	return status === Status.fulfilled ? (
 		<div className={styles.emailListContainer}>
@@ -17,10 +15,11 @@ const EmailList = ({ isOpen, setIsOpen, emailList, status }) => {
 						isOpen={isOpen}
 						setIsOpen={setIsOpen}
 						key={data.id}
+						type={type}
 					/>
 				))
 			) : (
-				<div className={styles.emailListLoading}>No emails</div>
+				<div className={styles.emailListLoading}>{`No ${type} emails`}</div>
 			)}
 		</div>
 	) : (

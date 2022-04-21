@@ -16,6 +16,7 @@ const Favorites = () => {
 					setIsOpen={setIsOpen}
 					emailList={favoriteEmailsList}
 					status={status}
+					type="favorite"
 				/>
 				{isOpen && <EmailBody setIsOpen={setIsOpen} />}
 			</div>

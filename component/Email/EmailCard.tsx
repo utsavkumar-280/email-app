@@ -6,27 +6,36 @@ import { useAppDispatch } from "redux/hooks";
 import { loadEmailBody } from "redux/slice/emailBody.slice";
 import { emailCardType } from "redux/email.types";
 import { useFavoritesEmail } from "redux/slice/favorites.slice";
+import { removeUnreadEmail } from "redux/slice/unread.slice";
 
-const EmailCard = ({ data, isOpen, setIsOpen }) => {
+const EmailCard = ({ data, isOpen, setIsOpen, type }) => {
 	const dispatch = useAppDispatch();
 	const date = new Date(data.date);
 	const formattedDate = dateFormatter(date);
 	const pfp = data.from.name[0].toUpperCase();
 
 	const emailDescription = textFormatter(data.short_description);
+
 	const clickHandler = function () {
 		setIsOpen(true);
 		dispatch(loadEmailBody({ ...data }));
+		dispatch(removeUnreadEmail({ ...data }));
 	};
 
 	const { favoriteEmailsList } = useFavoritesEmail();
 	const isAlreadyFavorite = favoriteEmailsList.find(
 		(email: emailCardType) => email?.id === data?.id
 	);
-	console.log({ isAlreadyFavorite });
 
 	return (
-		<section className={styles.cardContainer} onClick={clickHandler}>
+		<section
+			className={
+				type === "read" || type === "favorite"
+					? styles.cardContainerRead
+					: styles.cardContainer
+			}
+			onClick={clickHandler}
+		>
 			<section className={styles.cardImgContainer}>
 				<div>{pfp}</div>
 			</section>

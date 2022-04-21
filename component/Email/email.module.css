@@ -10,7 +10,20 @@
 	font-weight: 700;
 	margin: 0 1.75rem 0 0;
 }
-
+.cardContainerRead {
+	display: flex;
+	border: 0.175rem solid var(--borderColor);
+	padding: 0.65rem 1rem;
+	margin-bottom: 1.75rem;
+	border-radius: 0.65rem;
+	background-color: var(--readBgColor);
+	transition: all ease-in-out 0.25s;
+}
+.cardContainerRead:hover {
+	cursor: pointer;
+	border: 0.175rem solid var(--accentColor);
+	transition: all ease-in-out 0.25s;
+}
 .cardContainer {
 	display: flex;
 	border: 0.175rem solid var(--borderColor);
@@ -155,5 +168,5 @@
 }
 
 .emailBodyText > div > p {
-	margin: 2rem 1rem 2rem 0;
+	margin: 0.95rem 0;
 }

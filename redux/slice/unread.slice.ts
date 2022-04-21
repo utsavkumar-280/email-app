@@ -6,7 +6,9 @@ import { Status } from "redux/constant";
 import { loadEmails } from "./allEmail.slice";
 import { emailCardType } from "../email.types";
 
-export const addUnreadEmail = createAction("unread/addUnreadEmail");
+export const removeUnreadEmail = createAction<emailCardType>(
+	"unread/removeUnreadEmail"
+);
 
 const initialState: unreadInitialState = {
 	unreadEmailsList: [],
@@ -36,8 +38,24 @@ export const unreadSlice = createSlice({
 				);
 			}
 		});
-		builder.addCase(addUnreadEmail, (state, action) => {
-			state.unreadEmailsList = [...state.unreadEmailsList, action.payload];
+		builder.addCase(removeUnreadEmail, (state, action) => {
+			const mainEmail: emailCardType = action?.payload;
+
+			let dummyState = [
+				...new Set(state?.unreadEmailsList.map((a) => JSON.stringify(a))),
+			].map((a) => JSON.parse(a));
+
+			const cleanState = dummyState.filter(
+				(email) => email.id !== mainEmail?.id
+			);
+
+			state.unreadEmailsList = [...cleanState];
+			state.status = Status.fulfilled;
+
+			localStorage?.setItem(
+				"session_unread_emails",
+				JSON.stringify({ unreadEmailsList: state.unreadEmailsList })
+			);
 		});
 	},
 });
